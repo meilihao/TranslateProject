@@ -1,0 +1,410 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! 其他参考:https://github.com/Alsiso/normalize-zh */
+
+/**
+ * 1. font-family默认为sans-serif.
+ * 2. 在不禁止用户缩放情况下,避免设备方向变化后iOS和IE调整字体大小.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * 移除默认的margin
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display定义
+   ========================================================================== */
+
+/**
+ * 更正IE8/9中的所有HTML5元素未正确定义为`display: block`.
+ * 更正IE10/11和Firefox中的`details`,`summary`元素未正确定义为`display: block`.
+ * 更正IE11的main标签未正确定义为`display: block`.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. 更正IE8/9中未正确定义为`display: inline-block`的元素.
+ * 2. 规范Chrome,Firef,Opera中progress元素的垂直对齐方式.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * 防止现代浏览器显示没有controls属性的audio元素.
+ * 移除iOS5设备中多余的高度.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * 更正IE8/9/10中的hidden属性不起作用.
+ * 在IE8/9/10/11,Safari,Firefox<22下隐藏template元素.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * 去掉在IE10下点击超链接后其出现的灰色背景.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 增强在a:active,a:hover下元素的可读性.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* 语义化文本标签
+   ========================================================================== */
+
+/**
+ * 更正abbr元素在IE8/9/10/11,Safari,Chrome中没有下边框.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * 在Firefox 4+, Safari和Chrome中,将b和strong设为粗体.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * 更正在Safari和Chrome中没有样式的问题.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * 更正在Firefox 4+, Safari和Chrome中,section和article元素中的h1的font-size和margin.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * 更正在IE8/9下没有样式.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * 统一所有浏览器small的字体大小
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * 防止所有浏览器中的sub和sup影响行高.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 内嵌内容
+   ========================================================================== */
+
+/**
+ * 去掉在IE8/9/10中a内部img的边框.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * 更正IE9/10/11中overflow表现怪异的问题.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* 群组内容
+   ========================================================================== */
+
+/**
+ * 更正在IE8/9和Safari中figure的margin失效.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 更正Firefox和其他浏览器的差异.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * 设置滚动条，内容溢出时再出现.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * 更正所有浏览器中怪异的字体大小.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* 表单
+   ========================================================================== */
+
+/**
+ * 已知限制: 默认情况下, 不设置boder属性时,OS X上的Chrome和Safari的select只提供很少的样式.
+ */
+
+/**
+ * 1. 更正颜色不能继承的问题.
+ *    已知问题: 会影响到禁用元素的颜色.
+ * 2. 更正字体属性不能继承的问题.
+ * 3. 更正在Firefox 4+, Safari和Chrome中,margin设置不同的问题.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * 统一IE8/9/10/11的overflow属性为visible.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * `button`和`select`的text-transform属性继承不一致.
+ * 所有其他表单控件不继承`text-transform`.
+ * 更正Firefox, IE8/9/10/11和Opera下,button样式的继承.
+ * 更正Firefox下,`select`样式的继承.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. 避开 Android 4.0.* 中的 WebKit bug ，该bug会破坏原生的audio和video控件.
+ * 2. 更正iOS input的原生样式.
+ * 3. 统一其他类型的input的光标样式.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * 重置禁用元素的光标样式.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 移除Firefox 4+的边框和内边距
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 更正Firefox 4+会使用浏览器自带样式设置input的行高的问题.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * 1. 更正IE8/9/10中box-sizing被设为content-box的问题.
+ * 2. 去掉IE8/9/10中多余的内边距.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * 修复Chrome中递增/递减按钮的光标样式.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. 更正Safari和Chrome中`appearance`被设置为`searchfield`的问题.
+ * 2. 更正Safari和Chrome中`box-sizing`被设置为`border-box`.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * 移除原生默认样式，统一search的输入框样式
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 定义统一的border, margin和padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. 更正IE8/9/10/11不能继承`color`.
+ * 2. 重置内边距.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * 移除IE8/9/10/11下默认的垂直滚动条.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 不要继承`font-weight`属性.
+ * 注意:在OS X上的Chrome和Safari不能安全地变更其默认样式.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* 表格
+   ========================================================================== */
+
+/**
+ * 移除单元格间的大部分间距.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
